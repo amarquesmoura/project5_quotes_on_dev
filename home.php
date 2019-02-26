@@ -27,7 +27,7 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <?php the_posts_navigation(); ?>
+        <button type="button" id="new-quote-button">Show Me Another!</button>
 
         <?php else: ?>
 
