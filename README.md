@@ -21,4 +21,5 @@ Next you'll need to run `npm install` **inside your theme directory** to install
 Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
 
 And now would be a good time to `git init` :)
+
 # project5_quotes_on_dev
