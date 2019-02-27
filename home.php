@@ -23,17 +23,17 @@ get_header(); ?>
         <?php  /* Start the Loop */ ?>
         <?php while (have_posts()): the_post(); ?>
 
-        <?php get_template_part('template-parts/content'); ?>
+        <?php get_template_part('template-parts/content', 'home'); ?>
 
         <?php endwhile; ?>
-
-        <button type="button" id="new-quote-button">Show Me Another!</button>
 
         <?php else: ?>
 
         <?php get_template_part('template-parts/content', 'none'); ?>
 
         <?php endif; ?>
+
+        <button type="button" id="show-me-another">Show Me Another!</button>
 
     </main><!-- #main -->
 </div><!-- #primary -->
