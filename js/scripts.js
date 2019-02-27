@@ -11,16 +11,20 @@
         xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
       }
     }).done(function(response) {
+      console.log(response);
       $('.entry-content')
         .empty()
         .append('<p>' + response[0].content.rendered + '</p>');
-      $('.entry-meta')
-        .empty()
-        .append(
-          '<h2 class="entry-title">&mdash; ' +
-            response[0].title.rendered +
-            '</h2>'
+      $('.entry-title').html('&mdash; ' + response[0].title.rendered);
+      if (response[0]._qod_quote_source_url.length > 0) {
+        $('.source').html(
+          `, <a href="${response[0]._qod_quote_source_url}">${
+            response[0]._qod_quote_source
+          }</a>`
         );
+      } else if (response[0]._qod_quote_source.length > 0) {
+        $('.source').html(', ' + response[0]._qod_quote_source);
+      }
     });
   });
 })(jQuery);
