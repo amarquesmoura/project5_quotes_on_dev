@@ -12,7 +12,7 @@
         <?php the_excerpt(); ?>
     </div><!-- .entry-content -->
     <div class="entry-meta">
-        <h2 class="entry-title">
+        <h2 class="entry-title">&mdash;
             <?php the_title(); ?>
         </h2>
         <span class="source"></span>

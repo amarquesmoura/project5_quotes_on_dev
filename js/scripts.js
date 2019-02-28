@@ -11,7 +11,6 @@
         xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
       }
     }).done(function(response) {
-      console.log(response);
       $('.entry-content')
         .empty()
         .append('<p>' + response[0].content.rendered + '</p>');

@@ -605,6 +605,55 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.archive .entry-content p,
+.blog .entry-content p,
+.single .entry-content p {
+  font-size: 1.25rem; }
+
+@media (min-width: 620px) {
+  .archive .entry-content p,
+  .blog .entry-content p,
+  .single .entry-content p {
+    font-size: 1.75rem; } }
+
+@media (min-width: 1080px) {
+  .archive .entry-content p,
+  .blog .entry-content p,
+  .single .entry-content p {
+    font-size: 2.5rem; } }
+
+.archive .entry-meta,
+.blog .entry-meta,
+.single .entry-meta {
+  margin-bottom: 3rem; }
+
+.archive .entry-title,
+.blog .entry-title,
+.single .entry-title {
+  display: inline;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 0; }
+
+.archive .source,
+.blog .source,
+.single .source {
+  font-size: 1.25rem;
+  font-style: italic; }
+
+.blog .entry-content,
+.page .entry-title {
+  margin-top: 3rem; }
+
+.archive .page-title,
+.search .page-title {
+  border-bottom: 1px dotted #fff;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem; }
+
+.archive .hentry {
+  border-bottom: 1px dotted #fff; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

@@ -49,6 +49,7 @@ function qod_product_archive($query)
 {
     if (is_home() || $query->is_main_query()) {
         // Display 1 post at a time
+        $query->set('orderby', 'rand');
         $query->set('posts_per_page', 1);
 
         return;
