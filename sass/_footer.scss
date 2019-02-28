@@ -1,0 +1,26 @@
+#site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin: ($base__space-unit * 3) 0 ($base__space-unit * 2);
+}
+
+#primary-menu {
+  display: inline-flex;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+
+  li {
+    border-right: $border__white;
+    line-height: 1;
+    padding: 0 1rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}

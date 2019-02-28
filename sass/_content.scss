@@ -83,3 +83,19 @@
 .archive .hentry {
   border-bottom: 1px dotted #fff;
 }
+
+.category-archives ul,
+.post-archives ul,
+.tag-archives ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    font-size: 1rem;
+    margin-bottom: $base__space-unit / 3;
+    margin-right: $base__space-unit * 0.75;
+  }
+}

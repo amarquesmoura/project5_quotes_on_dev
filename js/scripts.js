@@ -1,6 +1,10 @@
 (function($) {
   $('#show-me-another').on('click', function(event) {
     event.preventDefault();
+    getRandomQuote();
+  });
+
+  function getRandomQuote() {
     $.ajax({
       method: 'get',
       url:
@@ -13,8 +17,8 @@
     }).done(function(response) {
       $('.entry-content')
         .empty()
-        .append('<p>' + response[0].content.rendered + '</p>');
-      $('.entry-title').html('&mdash; ' + response[0].title.rendered);
+        .append(response[0].content.rendered);
+      $('.entry-author').html('&mdash; ' + response[0].title.rendered);
       if (response[0]._qod_quote_source_url.length > 0) {
         $('.source').html(
           `, <a href="${response[0]._qod_quote_source_url}">${
@@ -27,5 +31,5 @@
         $('.source').empty();
       }
     });
-  });
+  }
 })(jQuery);

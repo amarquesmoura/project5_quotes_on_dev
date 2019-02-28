@@ -19,19 +19,14 @@ get_header(); ?>
             </h1>
         </header>
         <?php endif; ?>
-
-        <?php  /* Start the Loop */ ?>
-        <?php while (have_posts()) : the_post(); ?>
-
-        <?php get_template_part('template-parts/content', 'home'); ?>
-
-        <?php endwhile; ?>
-
-        <?php else : ?>
-
-        <?php get_template_part('template-parts/content', 'none'); ?>
-
         <?php endif; ?>
+
+        <article class="hentry">
+            <div class="entry-content"></div>
+            <div class="entry-meta">
+                <h2 class="entry-title"></h2><span class="source"></span>
+            </div>
+        </article>
 
         <button type="button" id="show-me-another">Show Me Another!</button>
 
