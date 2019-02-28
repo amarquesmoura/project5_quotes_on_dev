@@ -45,7 +45,7 @@ function qod_remove_comments_meta_boxes()
 }
 add_action('admin_init', 'qod_remove_comments_meta_boxes');
 
-function qod_product_archive($query)
+function qod_home($query)
 {
     if (is_home() || $query->is_main_query()) {
         // Display 1 post at a time
@@ -55,4 +55,4 @@ function qod_product_archive($query)
         return;
     }
 }
-add_action('pre_get_posts', 'qod_product_archive', 1);
+add_action('pre_get_posts', 'qod_home', 1);
