@@ -23,6 +23,8 @@
         );
       } else if (response[0]._qod_quote_source.length > 0) {
         $('.source').html(', ' + response[0]._qod_quote_source);
+      } else {
+        $('.source').empty();
       }
     });
   });
