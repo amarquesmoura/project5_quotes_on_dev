@@ -36,28 +36,21 @@
 .blog .entry-content p,
 .single .entry-content p {
   font-size: 1.25rem;
-}
-@media (min-width: 620px) {
-  .archive .entry-content p,
-  .blog .entry-content p,
-  .single .entry-content p {
+  @include tablet {
     font-size: 1.75rem;
   }
-}
-@media (min-width: 1080px) {
-  .archive .entry-content p,
-  .blog .entry-content p,
-  .single .entry-content p {
+  @include desktop {
     font-size: 2.5rem;
   }
 }
+
 .archive .entry-meta,
 .blog .entry-meta,
 .single .entry-meta {
   margin-bottom: 3rem;
 }
 .archive .entry-title,
-.blog .entry-title,
+.blog .entry-author,
 .single .entry-title {
   display: inline;
   font-size: 1.25rem;
@@ -97,5 +90,9 @@
     font-size: 1rem;
     margin-bottom: $base__space-unit / 3;
     margin-right: $base__space-unit * 0.75;
+
+    @include tablet {
+      font-size: 1.25rem;
+    }
   }
 }

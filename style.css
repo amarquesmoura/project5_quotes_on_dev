@@ -406,6 +406,12 @@ input[type='submit'] {
   font-weight: bold;
   line-height: 1;
   padding: 0.75rem 2.25rem; }
+  @media (min-width: 620px) {
+    button,
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
+      font-size: 1.25rem; } }
   button:active, button:focus, button:hover,
   input[type='button']:active,
   input[type='button']:focus,
@@ -597,6 +603,9 @@ a {
 .logo img {
   display: block;
   width: 300px; }
+  @media (min-width: 620px) {
+    .logo img {
+      width: 500px; } }
 
 /*--------------------------------------------------------------
 # Content
@@ -628,18 +637,16 @@ a {
 .blog .entry-content p,
 .single .entry-content p {
   font-size: 1.25rem; }
-
-@media (min-width: 620px) {
-  .archive .entry-content p,
-  .blog .entry-content p,
-  .single .entry-content p {
-    font-size: 1.75rem; } }
-
-@media (min-width: 1080px) {
-  .archive .entry-content p,
-  .blog .entry-content p,
-  .single .entry-content p {
-    font-size: 2.5rem; } }
+  @media (min-width: 620px) {
+    .archive .entry-content p,
+    .blog .entry-content p,
+    .single .entry-content p {
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .archive .entry-content p,
+    .blog .entry-content p,
+    .single .entry-content p {
+      font-size: 2.5rem; } }
 
 .archive .entry-meta,
 .blog .entry-meta,
@@ -647,7 +654,7 @@ a {
   margin-bottom: 3rem; }
 
 .archive .entry-title,
-.blog .entry-title,
+.blog .entry-author,
 .single .entry-title {
   display: inline;
   font-size: 1.25rem;
@@ -690,6 +697,11 @@ a {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     margin-right: 1.125rem; }
+    @media (min-width: 620px) {
+      .category-archives ul li,
+      .post-archives ul li,
+      .tag-archives ul li {
+        font-size: 1.25rem; } }
 
 #site-navigation {
   display: -webkit-box;
@@ -698,6 +710,16 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 4.5rem 0 3rem; }
+  @media (min-width: 620px) {
+    #site-navigation {
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+      #site-navigation p {
+        display: inline-block;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+        padding-left: 1rem; } }
 
 #primary-menu {
   display: -webkit-inline-box;

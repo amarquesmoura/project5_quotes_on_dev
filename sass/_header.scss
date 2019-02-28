@@ -5,4 +5,8 @@
 .logo img {
   display: block;
   width: 300px;
+
+  @include tablet {
+    width: 500px;
+  }
 }
