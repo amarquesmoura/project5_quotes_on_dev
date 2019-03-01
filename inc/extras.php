@@ -47,7 +47,7 @@ add_action('admin_init', 'qod_remove_comments_meta_boxes');
 
 function qod_home($query)
 {
-    if (is_home() || $query->is_main_query()) {
+    if (is_home() && $query->is_main_query() && !is_admin()) {
         // Display 1 post at a time
         $query->set('orderby', 'rand');
         $query->set('posts_per_page', 1);

@@ -66,8 +66,7 @@ function qod_scripts()
         'home_url'    => esc_url_raw(home_url()),
         'rest_url'    => esc_url_raw(rest_url()),
         'wpapi_nonce' => wp_create_nonce('wp_rest'),
-        'post_id'     => get_the_ID(),
-        'success'     => 'Thanks for submiting a quote!',
+        'success'     => 'Thanks for submitting a quote!',
         'failure'     => 'Something went wrong. Please try again later.',
     ));
     wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);

@@ -13,6 +13,11 @@
     getRandomQuote();
   });
 
+  $('#submit-quote').on('submit', function(post) {
+    post.preventDefault();
+    submitQuote();
+  });
+
   function getRandomQuote() {
     // Store the pre-AJAX request URL for back / forward nav
     lastPage = document.URL;
@@ -45,5 +50,27 @@
         $('.source').empty();
       }
     });
+  }
+
+  function submitQuote() {
+    $.ajax({
+      method: 'post',
+      url: qod_vars.rest_url + 'wp/v2/posts',
+      data: {
+        title: $('#author').val(),
+        content: $('#quote').val(),
+        _qod_quote_source: $('#source').val(),
+        _qod_quote_source_url: $('#source-url').val()
+      },
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
+      }
+    })
+      .done(function(data) {
+        alert(qod_vars.success);
+      })
+      .fail(function() {
+        alert(qod_vars.failure);
+      });
   }
 })(jQuery);
