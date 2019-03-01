@@ -1,10 +1,19 @@
 (function($) {
+  let lastPage = '';
+
+  // make back and forward navigation
+  $(window).on('popstate', function() {
+    window.location.replace(lastPage);
+  });
+
   $('#show-me-another').on('click', function(event) {
     event.preventDefault();
     getRandomQuote();
   });
 
   function getRandomQuote() {
+    // Store the pre-AJAX request URL for back / forward nav
+    lastPage = document.URL;
     $.ajax({
       method: 'get',
       url:
@@ -15,6 +24,9 @@
         xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
       }
     }).done(function(response) {
+      const url = qod_vars.home_url + '/' + response[0].slug + '/';
+      history.pushState(null, null, url);
+
       $('.entry-content')
         .empty()
         .append(response[0].content.rendered);
