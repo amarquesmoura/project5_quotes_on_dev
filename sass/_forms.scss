@@ -39,30 +39,60 @@ input[type='submit'] {
 
 /* Fields */
 
-input[type='text'],
 input[type='email'],
-input[type='url'],
 input[type='password'],
 input[type='search'],
+input[type='text'],
+input[type='url'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  background-color: #222;
+  border: 2px solid #0c0;
   border-radius: 3px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.25rem 0.5rem;
 
-  &:focus {
-    color: #111;
+  @include tablet {
+    font-size: 1.25rem;
   }
 }
-
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-input[type='search'] {
-  padding: 3px;
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='text']:focus,
+input[type='url']:focus,
+textarea:focus {
+  border-color: #fcfcd2;
 }
 
 textarea {
   padding-left: 3px;
   width: 100%;
+}
+
+/* Search */
+.search-form {
+  label {
+    float: left;
+    min-width: 200px;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: $base__space-unit / 2;
+}
+
+.search-submit {
+  border: 0;
+  float: left;
+  padding-left: $base__space-unit / 2;
+  padding-right: $base__space-unit / 2;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }

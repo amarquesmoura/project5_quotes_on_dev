@@ -67,9 +67,8 @@ function qod_scripts()
         'rest_url'    => esc_url_raw(rest_url()),
         'wpapi_nonce' => wp_create_nonce('wp_rest'),
         'post_id'     => get_the_ID(),
-        'nonce',
-        'success',
-        'failure'
+        'success'     => 'Thanks for submiting a quote!',
+        'failure'     => 'Something went wrong. Please try again later.',
     ));
     wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
     wp_enqueue_script('qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);

@@ -1,6 +1,8 @@
 (function($) {
   let lastPage = '';
 
+  getRandomQuote();
+
   // make back and forward navigation
   $(window).on('popstate', function() {
     window.location.replace(lastPage);

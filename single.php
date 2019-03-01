@@ -14,7 +14,6 @@ get_header(); ?>
 
         <?php get_template_part('template-parts/content', 'home'); ?>
 
-
         <?php endwhile; ?>
 
         <button type="button" id="show-me-another">Show Me Another!</button>
