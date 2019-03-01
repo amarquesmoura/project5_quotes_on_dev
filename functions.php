@@ -7,7 +7,7 @@
  * @package Quotes_On_Dev_Theme
  */
 
-if (!function_exists('qod_setup')): /**
+if (!function_exists('qod_setup')) : /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
     function qod_setup()
