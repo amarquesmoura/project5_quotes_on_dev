@@ -1,8 +1,6 @@
 (function($) {
   let lastPage = '';
 
-  getRandomQuote();
-
   // make back and forward navigation
   $(window).on('popstate', function() {
     window.location.replace(lastPage);
@@ -66,7 +64,7 @@
         xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
       }
     })
-      .done(function(data) {
+      .done(function() {
         alert(qod_vars.success);
       })
       .fail(function() {
